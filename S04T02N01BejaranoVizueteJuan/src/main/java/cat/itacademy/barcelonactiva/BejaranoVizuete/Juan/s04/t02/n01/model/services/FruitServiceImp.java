@@ -28,10 +28,6 @@ public class FruitServiceImp {
 		fruitRepository.deleteById(id);
 	}
 	
-	public void update(Integer id) {
-		fruitRepository.deleteById(id);
-	}
-	
 	public String updateFruit(Fruit fruitUpdated) {
 		Integer num = fruitUpdated.getId();
 		if (fruitRepository.findById(num).isPresent()) {
