@@ -35,10 +35,10 @@ public class FruitServiceImp {
 	public String updateFruit(Fruit fruitUpdated) {
 		Integer num = fruitUpdated.getId();
 		if (fruitRepository.findById(num).isPresent()) {
-			Fruit customerToUpdate = new Fruit();
-			customerToUpdate.setId(fruitUpdated.getId());
-			customerToUpdate.setNom(fruitUpdated.getNom());
-			customerToUpdate.setQuantitatQuilos(fruitUpdated.getQuantitatQuilos());
+			Fruit fruitToUpdate = new Fruit();
+			fruitToUpdate.setId(fruitUpdated.getId());
+			fruitToUpdate.setNom(fruitUpdated.getNom());
+			fruitToUpdate.setQuantitatQuilos(fruitUpdated.getQuantitatQuilos());
 
 			fruitRepository.save(customerToUpdate);
 			return "Fruita modificada";
